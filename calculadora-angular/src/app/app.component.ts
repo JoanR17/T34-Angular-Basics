@@ -11,11 +11,11 @@ export class AppComponent {
 
   addNum(num: string)
   {
-    if(this.resultado != '0')
+    if(this.resultado != '0' && num != '00')
     {
       this.operador = num;
     }
-    else if(this.operador == '0' && num == '00')
+    else if(((this.operador == '0' || this.operador == '') || this.resultado != '0') && num == '00')
     {
       this.operador = '0';
     }
